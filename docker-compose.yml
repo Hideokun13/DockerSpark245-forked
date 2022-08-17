@@ -12,10 +12,6 @@ services:
     volumes:
       - shared-workspace:/opt/workspace
       - ./local/notebooks:/opt/workspace/notebooks
-    environment:
-      GRANT_SUDO: "yes"
-    user: root
-    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
   spark-master:
     image: spark-master
     container_name: spark-master
